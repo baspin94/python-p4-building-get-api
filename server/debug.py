@@ -3,10 +3,14 @@
 from app import app
 from models import db, User, Game, Review
 
-
+game = Game.query.first()
+game.to_dict()
 
 if __name__ == '__main__':
     
     db.init_app(app)
     with app.app_context():
+
+
         import ipdb; ipdb.set_trace()
+    
